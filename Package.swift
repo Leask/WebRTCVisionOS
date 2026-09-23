@@ -10,14 +10,14 @@ let package = Package(
     products: [
         .library(
             name: "WebRTCVisionOS",
-            targets: ["WebRTC"]
+            targets: ["WebRTCVisionOSBinary"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "WebRTC",
-            url: "https://github.com/Leask/WebRTCVisionOS/releases/download/153.0.0-visionos.1/WebRTC-2026-09-23T13-04-33.xcframework.zip",
-            checksum: "19a8d2267411208d1473d5b72fc2d97d678ba25b3aa1ab3158e5d03a89d879a2"
+            name: "WebRTCVisionOSBinary",
+            url: "https://github.com/Leask/WebRTCVisionOS/releases/download/153.0.0-visionos.2/WebRTC-2026-09-23T19-12-34.xcframework.zip",
+            checksum: "92fb6c950da9ac77f0e3c8a1bc903addef446ee8cf6850ab0efb4010c9cc5558"
         ),
     ]
 )

@@ -12,13 +12,13 @@ same `WebRTC` module name as the upstream package.
 
 ## Current Release
 
-- Version: `153.0.0-visionos.1`
+- Version: `153.0.0-visionos.2`
 - Source fork: `Leask/WebRTC`
 - Source branch: `visionos-xcframework`
 - Upstream base: `stasel/WebRTC` `latest`, WebRTC `branch-heads/8010`
-- GitHub Actions run: `35857290007`
+- GitHub Actions run: `35899080224`
 - SwiftPM checksum:
-  `19a8d2267411208d1473d5b72fc2d97d678ba25b3aa1ab3158e5d03a89d879a2`
+  `92fb6c950da9ac77f0e3c8a1bc903addef446ee8cf6850ab0efb4010c9cc5558`
 
 ## Usage
 
@@ -29,7 +29,7 @@ visionOS slices.
 ```swift
 .package(
     url: "https://github.com/Leask/WebRTCVisionOS.git",
-    exact: "153.0.0-visionos.1"
+    exact: "153.0.0-visionos.2"
 )
 ```
 
@@ -42,3 +42,8 @@ Then conditionally depend on the package product for visionOS:
     condition: .when(platforms: [.visionOS])
 )
 ```
+
+The SwiftPM binary target is intentionally named `WebRTCVisionOSBinary` to avoid
+colliding with the upstream package target name. The bundled XCFramework still
+exports the standard `WebRTC` module, so consuming code can keep importing
+`WebRTC`.
